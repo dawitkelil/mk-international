@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MK International Consulting | Global Diplomatic & Business Solutions</title>
+    <title>MK International | Global Diplomatic & Business Solutions</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
-            <div class="logo"><a href="index.html">MK International</a></div>
+            <div class="logo">
+                <a href="index.html">MK International</a>
+            </div>
             <div class="nav-links">
                 <a href="index.html" class="active">Home</a>
                 <a href="services.html">Services</a>
@@ -25,35 +27,54 @@
         </div>
     </nav>
 
-    <header id="home" class="hero">
+    <header class="hero">
         <div class="container">
-            <h1>Global Diplomatic & Business Solutions</h1>
-            <p>Bridging International Relations with Strategic Business Consulting</p>
-            <div class="hero-cta">
-                <a href="services.html" class="cta-button">Our Services</a>
-                <a href="contact.html" class="cta-button cta-secondary">Contact Us</a>
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h1>Global Diplomatic & Business Solutions</h1>
+                    <p>Bridging International Relations with Strategic Business Consulting</p>
+                    <div class="hero-cta">
+                        <a href="services.html" class="cta-button">Our Services</a>
+                        <a href="contact.html" class="cta-button cta-secondary">Get in Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/ambassador-profile.jpg" alt="Ambassador Mulugeta Kelil" class="profile-image">
+                </div>
             </div>
         </div>
     </header>
 
-    <section class="featured-services">
+    <section class="services-preview">
         <div class="container">
-            <h2>How We Can Help</h2>
+            <div class="section-header">
+                <h2>How We Can Help</h2>
+                <p>Leveraging decades of experience to deliver comprehensive solutions for your international business needs</p>
+            </div>
             <div class="services-grid">
                 <a href="services.html#international" class="service-card">
-                    <i class="fas fa-globe"></i>
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
                     <h3>International Relations</h3>
                     <p>Expert guidance in diplomatic relations and international business development.</p>
+                    <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
                 </a>
                 <a href="services.html#business" class="service-card">
-                    <i class="fas fa-handshake"></i>
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
                     <h3>Business Consulting</h3>
                     <p>Strategic business solutions drawing from public and private sector experience.</p>
+                    <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
                 </a>
                 <a href="services.html#economic" class="service-card">
-                    <i class="fas fa-chart-line"></i>
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
                     <h3>Economic Advisory</h3>
                     <p>Comprehensive economic analysis and strategic planning services.</p>
+                    <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
                 </a>
             </div>
         </div>
@@ -63,13 +84,39 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="assets/images/ambassador-profile.jpg" alt="Ambassador Mulugeta Kelil" class="profile-image">
+                    <img src="assets/images/ambassador-meeting.jpg" alt="Ambassador Mulugeta Kelil in a diplomatic meeting" class="feature-image">
+                    <img src="assets/images/ambassador-speaking.jpg" alt="Ambassador Mulugeta Kelil speaking at an event" class="floating-image">
                 </div>
                 <div class="about-content">
+                    <span class="subtitle">About Our Founder</span>
                     <h2>Ambassador Mulugeta Kelil</h2>
-                    <p>With over two decades of diplomatic service and business expertise, Ambassador Kelil brings unparalleled experience in international relations and strategic consulting.</p>
-                    <a href="about.html" class="learn-more">Learn More About Us <i class="fas fa-arrow-right"></i></a>
+                    <p class="lead-text">With over two decades of diplomatic service and business expertise, Ambassador Kelil brings unparalleled experience in international relations and strategic consulting.</p>
+                    <div class="credentials">
+                        <div class="credential-item">
+                            <i class="fas fa-star"></i>
+                            <span>20+ Years Diplomatic Experience</span>
+                        </div>
+                        <div class="credential-item">
+                            <i class="fas fa-university"></i>
+                            <span>MA in Economics</span>
+                        </div>
+                        <div class="credential-item">
+                            <i class="fas fa-globe-americas"></i>
+                            <span>International Relations Expert</span>
+                        </div>
+                    </div>
+                    <a href="about.html" class="learn-more-link">Learn More About Us <i class="fas fa-arrow-right"></i></a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Global Business Strategy?</h2>
+                <p>Schedule a consultation to discuss how we can help achieve your international business goals.</p>
+                <a href="contact.html" class="cta-button">Contact Us Today</a>
             </div>
         </div>
     </section>
@@ -83,16 +130,20 @@
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
-                    <a href="index.html">Home</a>
-                    <a href="services.html">Services</a>
-                    <a href="about.html">About</a>
-                    <a href="experience.html">Experience</a>
-                    <a href="contact.html">Contact</a>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="services.html">Services</a>
+                        <a href="about.html">About</a>
+                        <a href="experience.html">Experience</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
                 </div>
                 <div class="footer-section">
                     <h3>Connect With Us</h3>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/mulugeta-kelil/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/mulugeta-kelil/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
                     </div>
                 </div>
             </div>
