@@ -34,12 +34,12 @@
                     <h1>Global Diplomatic & Business Solutions</h1>
                     <p>Bridging International Relations with Strategic Business Consulting</p>
                     <div class="hero-cta">
-                        <a href="services.html" class="cta-button">Our Services</a>
+                        <a href="services.html" class="cta-button">Explore Services</a>
                         <a href="contact.html" class="cta-button cta-secondary">Get in Touch</a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="assets/images/ambassador-profile.jpg" alt="Ambassador Mulugeta Kelil" class="profile-image">
+                    <img src="assets/images/ambassador-profile.jpg" alt="Ambassador Mulugeta Kelil" loading="lazy">
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
             <div class="services-grid">
                 <a href="services.html#international" class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-globe"></i>
+                        <i class="fas fa-globe-americas"></i>
                     </div>
                     <h3>International Relations</h3>
                     <p>Expert guidance in diplomatic relations and international business development.</p>
@@ -84,8 +84,8 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="assets/images/ambassador-meeting.jpg" alt="Ambassador Mulugeta Kelil in a diplomatic meeting" class="feature-image">
-                    <img src="assets/images/ambassador-speaking.jpg" alt="Ambassador Mulugeta Kelil speaking at an event" class="floating-image">
+                    <img src="assets/images/ambassador-meeting.jpg" alt="Ambassador Mulugeta Kelil in a diplomatic meeting" class="feature-image" loading="lazy">
+                    <img src="assets/images/ambassador-speaking.jpg" alt="Ambassador Mulugeta Kelil speaking at an event" class="floating-image" loading="lazy">
                 </div>
                 <div class="about-content">
                     <span class="subtitle">About Our Founder</span>
@@ -153,6 +153,40 @@
         </div>
     </footer>
 
-    <script src="scripts/main.js"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements
+        document.querySelectorAll('.service-card, .about-content, .hero-text, .hero-image').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html> 
